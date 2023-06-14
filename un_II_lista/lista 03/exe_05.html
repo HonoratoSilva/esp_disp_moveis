@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let frase = prompt("Digite uma frase:");
+        let palavraOriginal = prompt("Digite a palavra que deseja substituir:");
+        let palavraNova = prompt("Digite a nova palavra:");
+
+        let novaFrase = frase.replace(palavraOriginal, palavraNova);
+
+        document.getElementById("resultado").innerHTML = `Frase original: ${frase} <br> Nova frase: ${novaFrase}`;
+
+    </script>
+</body>
+</html>

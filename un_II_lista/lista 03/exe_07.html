@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let numero = prompt("Digite um número:");
+        let digitosExtenso = {
+            0: "zero",
+            1: "um",
+            2: "dois",
+            3: "três",
+            4: "quatro",
+            5: "cinco",
+            6: "seis",
+            7: "sete",
+            8: "oito",
+            9: "nove"
+        };
+
+        let resultado = "";
+
+        for (let i = 0; i < numero.length; i++) {
+            let digito = numero.charAt(i);
+            let digitoExtenso = digitosExtenso[digito];
+            resultado += digitoExtenso + ", ";
+        }
+
+        resultado = resultado.slice(0, -2);
+
+        document.getElementById("resultado").innerHTML = `Resultado: ${resultado}`;
+
+    </script>
+</body>
+</html>
