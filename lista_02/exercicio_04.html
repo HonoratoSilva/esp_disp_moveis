@@ -1,0 +1,29 @@
+<!-- 4.	Escreva um programa que calcule o salário líquido de um professor.  Os dados fornecidos são: valor da hora aula, número de aulas dadas no mês e percentual de desconto do INSS -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let valor_hora_aula = parseInt(prompt("Digite o valor da hora-aula:"));
+        let num_aulas_mes = parseInt(prompt("Digite o número de aulas dadas no mês:"));
+        let percentual_inss = parseInt(prompt("Digite o percentual de desconto do INSS:"));
+
+        let salario_bruto = valor_hora_aula * num_aulas_mes;
+        let desconto_inss = salario_bruto * (percentual_inss / 100);
+        let salario_liquido = salario_bruto - desconto_inss;
+
+
+        let resultado = `O salário líquido do professor é R$ ${salario_liquido}`
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

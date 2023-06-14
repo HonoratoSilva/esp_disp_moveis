@@ -1,0 +1,27 @@
+<!-- 6.	Escreva um programa em pseudocódigo que calcule o valor de uma prestação em atraso -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let valor = parseFloat(prompt("Digite o valor da prestação em atraso:"));
+        let taxa = parseFloat(prompt("Digite a taxa de juros:"));
+        let tempo = parseFloat(prompt("Digite o tempo de atraso em meses:"));
+
+        let juros = valor * (taxa / 100) * tempo;
+        let prestacao = valor + juros;
+
+        let resultado = `O valor da prestação em atraso é R$ ${prestacao.toFixed(2)}`;
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

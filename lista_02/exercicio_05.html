@@ -1,0 +1,25 @@
+<!-- 5.	Escreva um programa que calcule o IMC de uma pessoa -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let peso = parseFloat(prompt("Digite o seu peso em quilogramas:"));
+        let altura = parseFloat(prompt("Digite a sua altura em metros (com virgula ou ponto):"));
+
+        let imc = peso / (altura * altura);
+
+        let resultado = `Seu IMC é ${imc.toFixed(2)}`;
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

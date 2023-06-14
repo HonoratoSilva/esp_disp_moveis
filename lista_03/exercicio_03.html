@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let numero = parseInt(prompt("Digite um número com mais de um algarismo:"));
+        
+        if (numero == String(numero).split("").reverse().join("")){
+            document.getElementById("resultado").innerHTML =
+             `O número ${numero} é palindromo`;
+        } else {
+            document.getElementById("resultado").innerHTML =
+             `O número ${numero} não é palindromo`; 
+        }        
+    </script>
+</body>
+</html>

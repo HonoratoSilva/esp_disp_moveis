@@ -1,0 +1,29 @@
+<!-- 10. Escreva um programa que receba um número com quatro dígitos e imprima o primeiro e último digito. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let numeroQuatroDigitos = parseInt(prompt("Digite um número com quatro dígitos:"));
+
+        let primeiroDigito = numeroQuatroDigitos / 1000;
+        let ultimoDigito = numeroQuatroDigitos / 10;
+
+        let partes = ultimoDigito.toString().split(".");
+        let numeroDepoisDaVirgula = partes[1]
+
+        let resultado = `O primeiro digito de ${numeroQuatroDigitos} 
+                        é ${Math.trunc(primeiroDigito)} e o último é ${numeroDepoisDaVirgula}`;
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

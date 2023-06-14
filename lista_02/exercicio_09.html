@@ -1,0 +1,24 @@
+<!-- 9.	Escreva um programa que calcule o desconto de um produto. O novo valor deve possui um desconto de 12%. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let valorOriginal = parseFloat(prompt("Qual o valor do seu produto?"));
+
+        let valorDesconto = valorOriginal - (valorOriginal * 0.12)
+
+        let resultado = `O valor com desconto é: ${valorDesconto.toFixed(2)}`;
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

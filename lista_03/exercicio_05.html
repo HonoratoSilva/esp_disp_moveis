@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        function calcularParcelas(valorCompra, numParcelas) {
+            const valorParcela = Math.floor(valorCompra / numParcelas);
+            const resto = valorCompra % numParcelas;
+            const parcelas = new Array(numParcelas).fill(valorParcela);
+
+            for (let i = 0; i < resto; i++) {
+                parcelas[i]++;
+            }
+
+            return parcelas;
+        }
+
+        const valorCompra = parseInt(prompt("Digite o valor da compra:"));
+        const numParcelas = parseInt(prompt("Digite o valor das parcelas"));
+
+        const parcelas = calcularParcelas(valorCompra, numParcelas);
+        document.getElementById("resultado").innerHTML = `Parcelas: ${parcelas}`; 
+
+    </script>
+</body>
+</html>

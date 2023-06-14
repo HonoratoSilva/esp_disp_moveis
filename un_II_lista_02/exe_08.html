@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let pessoas = [];
+        let quantidadePessoasMais50Anos = 0;
+        let somaAlturas = 0;
+        let quantidadePessoasEntre10e20Anos = 0;
+        let quantidadePessoasPesoMenor40Kg = 0;
+
+        const quantidadePessoas = 25;
+
+        for (let i = 0; i < quantidadePessoas; i++) {
+            let idade = Math.floor(Math.random() * 100) + 1;
+            let altura = Math.random() * 2 + 1;
+            let peso = Math.floor(Math.random() * 60) + 10;
+
+            pessoas.push({ idade, altura, peso });
+
+            if (idade > 50) {
+                quantidadePessoasMais50Anos++;
+            }
+
+            if (idade >= 10 && idade <= 20) {
+                somaAlturas += altura;
+                quantidadePessoasEntre10e20Anos++;
+            }
+
+            if (peso < 40) {
+                quantidadePessoasPesoMenor40Kg++;
+            }
+        }
+
+        const mediaAlturas = somaAlturas / quantidadePessoasEntre10e20Anos;
+        const percentualPesoMenor40Kg = (quantidadePessoasPesoMenor40Kg / quantidadePessoas) * 100;
+
+        let idadeSuperior = `Quantidade de pessoas com idade superior a 50 anos: ${quantidadePessoasMais50Anos}`;
+        let mediaAltura = `Média das alturas das pessoas com idade entre 10 e 20 anos: ${mediaAlturas.toFixed(2)}`;
+        let percentualPeso =  `Percentual de pessoas com peso inferior a 40 quilos: ${percentualPesoMenor40Kg.toFixed(0)}`;
+
+
+        document.getElementById("resultado").innerHTML = `Obs: números para informações gerados automaticamente <br><br> 
+                                                        ${idadeSuperior} <br> ${mediaAltura} <br> ${percentualPeso}`;
+
+    </script>
+</body>
+</html>

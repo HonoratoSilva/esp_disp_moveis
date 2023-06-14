@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+
+        function calcularQuadrado(numero) {
+            return numero * numero;
+        }
+
+        let numeros = [];
+        let imprimirQuadrado = '';
+
+        for (let i = 0; i < 5; i++) {
+        let numero = parseFloat(prompt("Digite um número:"));
+        numeros.push(numero);
+        }
+
+        for (let i = 0; i < numeros.length; i++) {
+        let quadrado = calcularQuadrado(numeros[i]);
+        imprimirQuadrado += `O quadrado de ${numeros[i]} é ${quadrado} <br>`;
+        }
+        document.getElementById("resultado").innerHTML = imprimirQuadrado;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 1.	Escreva um programa que receba um número inteiro como entrada e imprima o sucessor e antecessor desse número. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let resultado, sucessor, antecessor;
+        let numero = parseInt(prompt("Digite um número inteiro:"));
+
+        sucessor = numero + 1;
+        antecessor = numero - 1;
+
+        resultado = `O sucessor de ${numero} é ${sucessor} e o antecessor é ${antecessor}`
+        document.getElementById("resultado").innerHTML = resultado;
+
+    </script>
+</body>
+</html>

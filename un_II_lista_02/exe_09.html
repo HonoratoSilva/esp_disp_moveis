@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+
+        let numeros = [];
+        let somaPares = 0;
+        let somaImpares = 0;
+
+        const quantidadeNumeros = 10;
+
+        for (let i = 0; i < quantidadeNumeros; i++) {
+        let numero = Math.floor(Math.random() * 100) + 1;
+        numeros.push(numero);
+
+        if (numero % 2 === 0) {
+            somaPares += numero;
+        } else {
+            somaImpares += numero;
+        }
+        }
+
+        console.log("Números gerados:", numeros);
+        console.log("Soma dos números pares:", somaPares);
+        console.log("Soma dos números ímpares:", somaImpares);
+
+        document.getElementById("resultado").innerHTML = `Números gerados: ${numeros} <br>
+                                                        Soma dos números pares: ${somaPares} <br>
+                                                        Soma dos números ímpares:${somaImpares}`;
+    </script>
+</body>
+</html>

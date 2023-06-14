@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let numero = parseInt(prompt("Digite um número:"));
+
+        let somaDigitos = 0;
+        let numeroString = numero.toString();
+
+        for (let i = 0; i < numeroString.length; i++) {
+            somaDigitos += parseInt(numeroString[i]);
+        }
+
+        let resultato = somaDigitos % 3 === 0 ? `O número ${numero} é multiplo de 3` : `O número ${numero} não é multiplo de 3`
+
+        document.getElementById("resultado").innerHTML = resultato;
+
+    </script>
+</body>
+</html>

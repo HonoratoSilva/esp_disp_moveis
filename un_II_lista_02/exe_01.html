@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let nota01 = parseInt(prompt("Digite a primeira nota:"));
+        let nota02 = parseInt(prompt("Digite a segunda nota:"));
+        let nota03 = parseInt(prompt("Digite a terceira nota:"));
+        let nota04 = parseInt(prompt("Digite a quarta nota:"));
+
+        let somaNotas = (nota01 + nota02 + nota03 + nota04) / 4;
+         
+        let  media = somaNotas >= 7 ? "Aprovado" : "Reprovado";
+
+        document.getElementById("resultado").innerHTML = `A média do aluno é ${somaNotas} e ele está ${media}`;
+
+    </script>
+</body>
+</html>
