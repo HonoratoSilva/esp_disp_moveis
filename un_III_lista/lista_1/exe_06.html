@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let contagemNumeros = parseInt(prompt("Quantos números deseja inserir no array?"));
+        let lista = [];
+
+        for (let i = 0; i < contagemNumeros; i++) {
+            let numero = parseInt(prompt(`Digite o elemento ${i + 1} do array:`));
+            lista.push(numero);
+        }
+   
+        document.getElementById("resultado").innerHTML = `Números escolhidos: ${lista} <br>
+                                                        Numeros reverso: ${lista.reverse()}`;
+
+    </script>
+</body>
+</html>

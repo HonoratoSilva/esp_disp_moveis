@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+
+    <h1 id="resultado"></h1>
+    <script>
+        let n1 = parseInt(prompt("Digite o primeiro número:"));
+        let n2 = parseInt(prompt("Digite o segundo número:"));
+        let n3 = parseInt(prompt("Digite o terceiro número:"));
+
+        let numeros = [n1, n2, n3];
+        
+        document.getElementById("resultado").innerHTML = `Números escolhidos: ${numeros} <br>
+                                                        Numeros reverso: ${numeros.reverse()}`;
+
+    </script>
+</body>
+</html>
