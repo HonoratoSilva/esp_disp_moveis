@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: .5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: fixed;
+    background-color: #ffffff;
+    color: rgb(154, 94, 62);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+    color: #454545;
+}
+
+img {
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.titulo {
+    color: #262626;
+    background-color: rgb(233, 232, 232);
+    border: 1px solid #bababa;
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.container-ingredientes {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.ingredientes {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.ingredientes li {
+    position: relative;
+    padding: 5px 30px;
+}
+
+.ingredientes li:before {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 20px; 
+    height: 20px; 
+    background-image: url("https://img.freepik.com/icones-gratis/talheres_318-292391.jpg");
+    background-size: cover;
+}
+
+button {
+    display: flex;
+    background-color: orangered;
+    color: white;
+    padding: .5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    transition: .5s;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .9;
+    transition: .5s;
+}
+
+.carrinho {
+    width: 30px; 
+    height: 30px;
+    margin-right: .3rem;
+}
+
+.preparo {
+    display: flex;
+}
+
+.preparo ul {
+    list-style-type: none;
+}
+
+.numeros-preparo {
+    margin: 0 1rem;
+    border: 1px solid white;
+}
+
+.numeros-preparo p {
+    margin: 1rem 0;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 4px orangered;
+    border-radius: 20px;
+}
+
+.numeros-preparo p:last-child{
+    margin: 1.2rem 0;
+}
+
+.lista-preparo li{
+    padding: .5rem 0;
+}
+
+.preparo-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.hora-preparo {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.hora-preparo img {
+    width: 30px;
+    height: 30px;
+}
+
+.descricao-preparo {
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 4rem;
+}
